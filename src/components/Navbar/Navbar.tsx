@@ -1,6 +1,8 @@
-import React from 'react'
+"use client";
+import { Link as ScrollLink } from 'react-scroll';
+import React from 'react';
 
-const link = [
+const links = [
     { label: "Главная", target: "home", offset: -100 },
     { label: "О нас", target: "about", offset: -80 }, 
     { label: "Классы", target: "classes", offset: -80 },
@@ -10,8 +12,16 @@ const link = [
 
 const Navbar = ({containerStyles}: {containerStyles: string}) => {
   return (
-    <nav className=''>
-      Nav
+    <nav className={`${containerStyles}`}>
+      <menu className="w-full flex gap-4">
+        {links.map((link, index) => {
+          return (
+            <li key={index}>
+              <ScrollLink offset={link.offset} to={link.target} smooth spy activeClass='active' className="cursor-pointer hover:text-accent transition-all">{link.label}</ScrollLink>
+            </li>
+          );
+        })}
+      </menu>
     </nav>
   )
 }
