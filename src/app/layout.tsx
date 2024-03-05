@@ -30,7 +30,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ru">
-      <body className={`${oswald.variable}`}>
+      <body className={`${oswald.variable} ${roboto.variable}`}>
         <div className="__next">
           <Header />
           <main className="w-full" id="main">
