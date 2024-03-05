@@ -3,9 +3,9 @@ import Navbar from '../Navbar/Navbar'
 
 const Header = () => {
   return (
-    <header className="w-full fixed left-0 right-0 top-0">
+    <header className="w-full h-[90px] bg-white fixed left-0 right-0 top-0">
         <div className="container mx-auto">
-          <Navbar containerStyles='bg-red-200 py-12' />
+          <Navbar containerStyles='hidden xl:flex' />
         </div>
     </header>
   )
