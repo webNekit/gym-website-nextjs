@@ -2,6 +2,7 @@
 import React from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { motion } from 'framer-motion';
+import { fadeIn } from '@/utils/variantsMotion';
 // import swiper styles
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -14,20 +15,35 @@ const HeroSlider = () => {
     <Swiper className='w-full h-full'>
         <SwiperSlide className="w-full h-full flex justify-end">
             <div className='lg:max-w-[65%] lg:ml-auto'>
-                <h1 className="h1 text-center lg:text-left mb-8">
+                <motion.h1 variants={fadeIn('up', 0.1)} initial="hidden" whileInView={'show'} viewport={{once: false, amount: 0.2}} className="h1 text-center lg:text-left mb-8">
                     <span>Начни работу</span> над собой
-                </h1>
-                <p className="text-slate-200 text-xl text-center lg:text-left mb-14">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae architecto officiis voluptatem cupiditate aut deserunt.</p>
-                <CustomButton text={'Заказать консультацию'} containerStyles={'sm:w-[200px] w-full h-[60px] px-4'} />
+                </motion.h1>
+                <motion.p variants={fadeIn('up', 0.5)} initial="hidden" whileInView={'show'} viewport={{once: false, amount: 0.2}} className="text-slate-200 text-xl text-center lg:text-left mb-14">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae architecto officiis voluptatem cupiditate aut deserunt.</motion.p>
+                <motion.div variants={fadeIn('up', 0.7)} initial="hidden" whileInView={'show'} viewport={{once: false, amount: 0.2}}>
+                  <CustomButton text={'Заказать консультацию'} containerStyles={'sm:w-[200px] w-full h-[60px] px-4'} />
+                </motion.div>
             </div>
         </SwiperSlide>
         <SwiperSlide className="w-full h-full flex justify-end">
             <div className='lg:max-w-[65%] lg:ml-auto'>
-                <h1 className="h1 text-center lg:text-left mb-8">
+                <motion.h1 variants={fadeIn('up', 0.1)} initial="hidden" whileInView={'show'} viewport={{once: false, amount: 0.2}} className="h1 text-center lg:text-left mb-8">
                     <span>Начни работу</span> над собой
-                </h1>
-                <p className="text-slate-200 text-xl text-center lg:text-left mb-14">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae architecto officiis voluptatem cupiditate aut deserunt.</p>
-                <CustomButton text={'Заказать консультацию'} containerStyles={'sm:w-[200px] w-full h-[60px] px-4'} />
+                </motion.h1>
+                <motion.p variants={fadeIn('up', 0.5)} initial="hidden" whileInView={'show'} viewport={{once: false, amount: 0.2}} className="text-slate-200 text-xl text-center lg:text-left mb-14">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae architecto officiis voluptatem cupiditate aut deserunt.</motion.p>
+                <motion.div variants={fadeIn('up', 0.7)} initial="hidden" whileInView={'show'} viewport={{once: false, amount: 0.2}}>
+                  <CustomButton text={'Заказать консультацию'} containerStyles={'sm:w-[200px] w-full h-[60px] px-4'} />
+                </motion.div>
+            </div>
+        </SwiperSlide>
+        <SwiperSlide className="w-full h-full flex justify-end">
+            <div className='lg:max-w-[65%] lg:ml-auto'>
+                <motion.h1 variants={fadeIn('up', 0.1)} initial="hidden" whileInView={'show'} viewport={{once: false, amount: 0.2}} className="h1 text-center lg:text-left mb-8">
+                    <span>Начни работу</span> над собой
+                </motion.h1>
+                <motion.p variants={fadeIn('up', 0.5)} initial="hidden" whileInView={'show'} viewport={{once: false, amount: 0.2}} className="text-slate-200 text-xl text-center lg:text-left mb-14">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae architecto officiis voluptatem cupiditate aut deserunt.</motion.p>
+                <motion.div variants={fadeIn('up', 0.7)} initial="hidden" whileInView={'show'} viewport={{once: false, amount: 0.2}}>
+                  <CustomButton text={'Заказать консультацию'} containerStyles={'sm:w-[200px] w-full h-[60px] px-4'} />
+                </motion.div>
             </div>
         </SwiperSlide>
         <SwiperNavButtons 
