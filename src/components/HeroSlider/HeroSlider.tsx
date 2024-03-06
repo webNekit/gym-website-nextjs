@@ -1,9 +1,11 @@
 "use client";
 import React from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { motion } from 'framer-motion';
 // import swiper styles
 import 'swiper/css';
 import 'swiper/css/navigation';
+// import components 
 import CustomButton from '../CustomButton/CustomButton';
 import SwiperNavButtons from '../SwiperNavButtons/SwiperNavButtons';
 
