@@ -26,7 +26,7 @@ const Header = () => {
     }
   },[]);
   return (
-    <header className={`${headerActive ? 'h-[70px]' : 'h-[125px]'} transition-all z-50 w-full h-[90px] bg-primary-200 fixed left-0 right-0 top-0`}>
+    <header className={`${headerActive ? 'h-[70px]' : 'h-[125px]'} transition-all z-50 w-full h-[80px] bg-primary-200 fixed left-0 right-0 top-0`}>
         <div className="container mx-auto h-full flex items-center justify-between">
           {/* Start logo */}
           <Link href="/">
@@ -34,7 +34,7 @@ const Header = () => {
           </Link>
           {/* End logo */}
           {/* mobile navbar - not visible for large screens */}
-          <MobileNavbar containerStyles={`${headerActive ? 'top-[70px]' : 'top-[125px]'} 
+          <MobileNavbar containerStyles={`${headerActive ? 'top-[70px]' : 'top-[80px]'} 
           ${openNav ? 'max-h-max pt-8 pb-10 border-t border-white/10' : 'max-h-0 pt-0 pb-0 overflow-hidden border-white/0'}
           transition-all text-white p-[15px] flex flex-col align-start gap-4 uppercase font-medium fixed bg-primary-200 w-full left-0 right-0 lg:hidden`} />
           {/* desktop navbar - not visible for small screens */}
