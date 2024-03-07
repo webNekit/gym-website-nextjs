@@ -28,7 +28,7 @@ const About = () => {
   ];
 
   return (
-    <section className="pt-8 pb-16 lg:pt-16 lg:pb-28" id='about'>
+    <section className="pt-8 pb-16 lg:pt-16 lg:pb-28 bg-white" id='about'>
       <div className="container mx-auto">
         <div className="w-full flex flex-col items-center gap-2 mb-6">
           <h2 className="h2 text-center">О WellFit</h2>
@@ -37,11 +37,11 @@ const About = () => {
         <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {featureds.map((featured, index) => {
             return (
-              <div key={index}>
-                <div className='text-4xl bg-primary-300 text-white w-[80px] h-[80px] rounded-full flex justify-center items-center'>{featured.icon}</div>
+              <div key={index} className='flex flex-col justify-center items-center gap-4 border p-10 rounded-lg'>
+                <div className='text-4xl text-center bg-primary-300 text-white w-[80px] h-[80px] rounded-full flex justify-center items-center'>{featured.icon}</div>
                 <div>
-                  <h3 className='h4 text-accent'>{featured.title}</h3>
-                  <p>{featured.subtitle}</p>
+                  <h3 className='h4 text-accent text-center mb-4'>{featured.title}</h3>
+                  <p className='text-center'>{featured.subtitle}</p>
                 </div>
               </div>
             )
