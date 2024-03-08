@@ -6,7 +6,7 @@ const links = [
     { label: "Главная", target: "home", offset: -100 },
     { label: "О нас", target: "about", offset: -80 }, 
     { label: "Классы", target: "classes", offset: -80 },
-    { label: "Команда", target: "team", offset: -40 },
+    { label: "Тренеры", target: "team", offset: -40 },
     { label: "Блог", target: "blog", offset: 0 }, 
 ]
 
