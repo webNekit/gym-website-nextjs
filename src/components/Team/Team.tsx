@@ -22,7 +22,7 @@ const trainers = [
   {
     img: '/assets/img/teams/img_2.jpg',
     name: 'Pavel Glebov',
-    role: 'Мисстер Олимпия',
+    role: 'Мистер Олимпия',
     desription: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Et labore nihil aspernatur impedit neque delectus?',
     socials: [
       { icon: FaFacebook, href: 'http.facebook.com' },

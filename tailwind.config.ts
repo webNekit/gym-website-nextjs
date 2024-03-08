@@ -23,6 +23,7 @@ const config: Config = {
     },
     backgroundImage: {
       hero: 'url(/assets/img/hero/bg.jpg)', 
+      membership: 'url(/assets/img/membership/bg.webp)',
     },
     extend: {
       colors: {
