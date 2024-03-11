@@ -49,11 +49,10 @@ const Header = () => {
           {/* menu button */}
           <div className="flex items-center gap-4">
             <ul className="flex items-center gap-2">
-              {user ? 
+              {user ?
               <LogoutLink className='uppercase text-white/50 hover:text-accent transition-all'>Выйти</LogoutLink> 
               : 
-              <RegisterLink className='uppercase text-white/50 hover:text-accent transition-all'>Зарегистрироваться</RegisterLink>
-              ><LoginLink className='uppercase text-white/50 hover:text-accent transition-all'>Войти</LoginLink>
+              <LoginLink className='uppercase text-white/50 hover:text-accent transition-all'>Войти</LoginLink>
               }
               
             </ul>
