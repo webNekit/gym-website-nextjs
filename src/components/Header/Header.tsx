@@ -5,6 +5,7 @@ import MobileNavbar from '../MobileNavbar/MobileNavbar';
 import Link from 'next/link';
 import Image from 'next/image';
 import { MdMenu } from 'react-icons/md';
+import { RegisterLink, LoginLink, LogoutLink, useKindeBrowserClient } from '@kinde-oss/kinde-auth-nextjs';
 
 const Header = () => {
 
@@ -12,7 +13,13 @@ const Header = () => {
   const [headerActive, setHeaderActive] = useState(false);
   // состояние открытия меню
   const [openNav, setOpenNav] = useState(false);
+  // Переменная для хронения информации о пользователе
+  const { user } = useKindeBrowserClient();
+  useEffect(() => {
+    console.log(user);
+  }, [user]);
 
+  // обработчик скрола
   useEffect(() => {
     // initial scroll
     const handleScroll = () => {
@@ -42,12 +49,13 @@ const Header = () => {
           {/* menu button */}
           <div className="flex items-center gap-4">
             <ul className="flex items-center gap-2">
-            <li className='inline-flex'>
-                <Link className='uppercase text-white/50 hover:text-accent transition-all' href={'#'}>Зарегистрироваться</Link>
-              </li>
-              <li className='inline-flex'>
-                <Link className='uppercase text-white/50 hover:text-accent transition-all' href={'#'}>Войти</Link>
-              </li>
+              {user ? 
+              <LogoutLink className='uppercase text-white/50 hover:text-accent transition-all'>Выйти</LogoutLink> 
+              : 
+              <RegisterLink className='uppercase text-white/50 hover:text-accent transition-all'>Зарегистрироваться</RegisterLink>
+              ><LoginLink className='uppercase text-white/50 hover:text-accent transition-all'>Войти</LoginLink>
+              }
+              
             </ul>
             <button onClick={() => setOpenNav(!openNav)} className='text-white lg:hidden'>
               <MdMenu className="text-4xl" />
