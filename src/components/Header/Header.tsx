@@ -40,8 +40,15 @@ const Header = () => {
           {/* desktop navbar - not visible for small screens */}
           <Navbar containerStyles='hidden text-white lg:flex' />
           {/* menu button */}
-          <div className="flex items-center gap-2">
-            <Link href="/" className='px-4 py-2 bg-accent rounded-md text-white text-center'>Задать вопрос</Link>
+          <div className="flex items-center gap-4">
+            <ul className="flex items-center gap-2">
+            <li className='inline-flex'>
+                <Link className='uppercase text-white/50 hover:text-accent transition-all' href={'#'}>Зарегистрироваться</Link>
+              </li>
+              <li className='inline-flex'>
+                <Link className='uppercase text-white/50 hover:text-accent transition-all' href={'#'}>Войти</Link>
+              </li>
+            </ul>
             <button onClick={() => setOpenNav(!openNav)} className='text-white lg:hidden'>
               <MdMenu className="text-4xl" />
             </button>
