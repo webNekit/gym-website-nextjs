@@ -13,8 +13,11 @@ const axiosClient = axios.create({
 // API - запросы
 // API - запрос на получение цен 
 const getPrices = () => axiosClient.get('/prices?populate=*');
+// API - запрос на получение списка команды
+const getTeamsList = () => axiosClient.get('teams?populate=*');
 
 // экспортная функция
 export default {
     getPrices,
+    getTeamsList,
 }

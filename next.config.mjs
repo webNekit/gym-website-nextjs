@@ -1,8 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     reactStrictMode: false,
-    image: {
-        domains: ["lh3.googleusercontent.com"],
+    images: {
+        domains: ["lh3.googleusercontent.com", 
+        `${process.env.NEXT_PUBLIC_STRAPI_API_URL}`,
+        'localhost'],
     },
 };
 
