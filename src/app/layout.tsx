@@ -6,8 +6,8 @@ import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
 
 // font Oswald settings
-const oswald = Oswald({ 
-  subsets: ["cyrillic"], 
+const oswald = Oswald({
+  subsets: ["cyrillic"],
   weight: ['200', '300', '400', '500', '600', '700'],
   variable: '--font-oswald',
 });
@@ -24,13 +24,13 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({
-  children,
+children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
     <html lang="ru">
-      <body className={`${oswald.variable} ${roboto.variable} w-full bg-gray-200`}>
+      <body className={`${oswald.variable} ${roboto.variable} w-full bg-gray-200 text-white`}>
         <div className="__next">
           <Header />
           <main className="w-full" id="main">
