@@ -11,22 +11,12 @@ import CustomButton from '../CustomButton/CustomButton';
 // swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
+import usePrices from '@/Hooks/usePrices';
 
 const MemberShipSlider = () => {
 
-
-  const [priceList, setPriceList] = useState([]);
-
-  useEffect(() => {
-    getPriceList();
-  },[]);
-
-  const getPriceList = () => {
-    GlobalAPI.getPrices().then(resp => {
-      console.log(resp.data.data);
-      setPriceList(resp.data.data);
-    });
-  }
+  // Подключаем хук
+  const priceList = usePrices();
 
   return (
     <Swiper className="w-full h-[calc(100% + 120px)]" slidesPerView={1} modules={[ Pagination ]} pagination={{ clickable: true }} breakpoints={{ 768: { slidesPerView: 2, spaceBetween: 30 }, 1024: { slidesPerView: 3, spaceBetween: 30 }  }}>
