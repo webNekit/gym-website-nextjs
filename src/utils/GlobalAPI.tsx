@@ -1,5 +1,5 @@
 // подключаем библиотеку axios
-const { defaul: axios } = require('axios');
+const axios = require("axios");
 // вызываем переменную с токенном из .env
 const API_TOKEN = process.env.NEXT_PUBLIC_STRAPI_API_TOKEN;
 // создаем подключение клиента
